@@ -1,7 +1,7 @@
 <?php
 function mostrarDados()
 {
-    include('models/conexao.php');
+    include('../models/conexao.php');
     if (empty($_POST['buscar'])) {
         echo 'Digite um nome';
     } else {
