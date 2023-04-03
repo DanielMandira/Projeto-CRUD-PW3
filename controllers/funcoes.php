@@ -16,7 +16,7 @@ function mostrarDados()
                      <th scope='col'>Excluir</th>
                  </tr>
              </thead>";
-        $query = mysqli_query($conexao, "SELECT * from  alunos where nome like '%$varBusca%'");
+        $query = mysqli_query($conexao, "SELECT * from alunos where nome like '%$varBusca%' order by codigos DESC'");
         while ($exibe = mysqli_fetch_array($query)) {
             $varSexo = ($exibe[3] == 'Masculino') ? "o" : "a";
             echo "<tdoby> <tr>";
